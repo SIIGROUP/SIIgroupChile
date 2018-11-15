@@ -1,0 +1,96 @@
+﻿@model IEnumerable<SiiGroupChileCross.Common.Models.Noticias>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Texto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath4)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Texto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImagePath))
+                {
+                    <img src="@Url.Content(item.ImagePath)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImagePath1))
+                {
+                    <img src="@Url.Content(item.ImagePath1)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImagePath2))
+                {
+                    <img src="@Url.Content(item.ImagePath2)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImagePath3))
+                {
+                    <img src="@Url.Content(item.ImagePath3)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImagePath4))
+                {
+                    <img src="@Url.Content(item.ImagePath4)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.NoticiaId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.NoticiaId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.NoticiaId })
+            </td>
+        </tr>
+    }
+
+</table>

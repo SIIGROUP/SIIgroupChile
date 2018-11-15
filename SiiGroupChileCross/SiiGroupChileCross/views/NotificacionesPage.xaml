@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiiGroupChileCross.views.NotificacionesPage"
+             Title="Notificaciones">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+
+                <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="inicio.png"  Grid.Column="0" Grid.Row="0"  HorizontalOptions="Fill" Aspect="AspectFill"/>
+            </Grid>
+                
+                <StackLayout Orientation="Horizontal" Padding="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="290"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                             <Label Grid.Column="0" HorizontalOptions="Center" Font="Bold" FontSize="Default">FECHA</Label>
+                             <Label Grid.Column="1" HorizontalOptions="Center" Font="Bold" FontSize="Default">MENSAJE</Label>
+                             <Label Grid.Column="0" Grid.Row="1">06/11/2018</Label>
+                        <Label Grid.Column="1" Grid.Row="1" Text="PROBANDO LAS NOTIFICACIONES DESDE AZURE (POR AHORA EL HISTORIAL ES ESTATICO)"> </Label>
+                        <Label Grid.Column="0" Grid.Row="2">07/11/2018</Label>
+                        <Label Grid.Column="1" Grid.Row="2" Text="PROBANDO LAS NOTIFICACIONES EN EL FUTURO SE VERAN AQUI"></Label>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

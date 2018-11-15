@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiiGroupChileCross.views.LinksPage"
+             Title="Links">
+    <ContentPage.Content>
+       <StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="inicio.png"  Grid.Column="0" Grid.Row="0"  HorizontalOptions="Fill" Aspect="AspectFill"/>
+            </Grid>
+
+            <StackLayout>
+                <Button Text="Portal Empleado" Clicked="Button_Clicked"></Button>
+                <Button Text="Imputación de Horas" Clicked="Button_Clicked_1"></Button>
+                <Button Text="TeamFoundation" Clicked="Button_Clicked_2"></Button>
+                <Button Text="Comite Paritario" Clicked="Button_Clicked_3"></Button>
+                <Button Text="Zoho Recluit" Clicked="Button_Clicked_4"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

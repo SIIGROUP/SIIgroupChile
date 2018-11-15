@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiiGroupChileCross.views.NoticiasPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Noticias">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" >
+
+                <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="inicio.png"  Grid.Column="0" Grid.Row="0"  HorizontalOptions="Fill" Aspect="AspectFill"/>
+            </Grid>
+
+
+    
+                <StackLayout BindingContext="{Binding Noticias}" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="2" >
+            <ListView
+                ItemsSource="{Binding Noticias}" 
+                HasUnevenRows="True" 
+                IsRefreshing="{Binding IsRefreshing}" 
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Command="{Binding VerNoticiaCommand}" Text="Ver Noticia"></MenuItem>
+                                    </ViewCell.ContextActions>
+                                    <Grid Padding="10" >
+                                         <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding VerNoticiaCommand}"></TapGestureRecognizer>
+                                         </Grid.GestureRecognizers>
+                                    <Grid.ColumnDefinitions>
+                                             <ColumnDefinition Width="100"/>
+                                             <ColumnDefinition Width="*"/>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition Height="100"/>
+                                            <RowDefinition Height="20"/>
+                                        </Grid.RowDefinitions>
+                                    <Image Source="{Binding ImageFullPath}" WidthRequest="100" HeightRequest="80" Grid.Column="0" Grid.Row="1"></Image>
+                                    <Label Grid.Column="1" FontSize="Medium" Grid.Row="0" Text="{Binding Titulo}" Font="Bold"  HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                                    <Label Grid.Column="1" FontSize="Small" Grid.Row="1" Text="{Binding Texto}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  ></Label>
+                                    <Label Grid.Column="1" FontSize="Micro" Grid.Row="2" Text="{Binding Fecha}" HorizontalOptions="End" ></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            
+            </ListView>
+           
+        </StackLayout>
+          
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿@model SiiGroupChileCross.Common.Models.Noticias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Noticias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Texto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Texto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NoticiaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

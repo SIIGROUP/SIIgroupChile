@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiiGroupChileCross.views.Incio">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Place new controls here -->
+            <StackLayout VerticalOptions="Start" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Image Source="inicio.png"  Grid.Column="0" Grid.Row="0"  HorizontalOptions="Fill" Aspect="AspectFill"/>
+                </Grid>
+
+
+            </StackLayout  >
+            <Frame HorizontalOptions="Center" VerticalOptions="Center" Margin="40">
+                
+                        <StackLayout>
+                    <Image Source="logo200.png" HorizontalOptions="Center"></Image>
+                            <Button Text="INICIAR SESION CON GOOGLE"   Clicked="Button_Clicked"  HorizontalOptions="Fill"/>
+                    <Label Text="V1.1" Opacity="0.5"></Label>
+                </StackLayout>
+                
+
+
+
+
+            </Frame>
+          
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

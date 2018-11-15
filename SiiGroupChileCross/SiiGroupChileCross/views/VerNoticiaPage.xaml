@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="SiiGroupChileCross.views.VerNoticiaPage"
+             Title="Ver Noticia">
+    <ContentPage.Content>
+        
+        <ScrollView BindingContext="{Binding VerNoticia}">
+            
+            <StackLayout>
+                <StackLayout HeightRequest="56" BackgroundColor="DodgerBlue">
+                    <Button  Clicked="Button_Clicked" Image="ic_arrow_back.png" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Start" >
+                        
+                    </Button>
+                  
+                </StackLayout>
+                <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Image Source="inicio.jpg"  Grid.Column="0" Grid.Row="0"  HorizontalOptions="Fill" Aspect="AspectFill"/>
+                </Grid>
+                </StackLayout>
+                <Frame>
+                
+                <StackLayout>
+
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="{Binding Noticias.Titulo}" Font="Bold" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding Noticias.Texto}" FontSize="Default">
+                        </Label>
+                    </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Image Source="{Binding Noticias.ImageFullPath}" WidthRequest="300" HeightRequest="300" ></Image>
+                    </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Image Source="{Binding Noticias.ImageFullPath1}" WidthRequest="300" HeightRequest="300" ></Image>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Image Source="{Binding Noticias.ImageFullPath2}" WidthRequest="300" HeightRequest="300" ></Image>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Image Source="{Binding Noticias.ImageFullPath3}" WidthRequest="300" HeightRequest="300" ></Image>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Image Source="{Binding Noticias.ImageFullPath4}" WidthRequest="300" HeightRequest="300" ></Image>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="End" >
+                            <Label  FontSize="Micro" Text="{Binding Noticia.Fecha}" HorizontalOptions="End" ></Label>
+                        </StackLayout>
+                       
+                     
+                </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
